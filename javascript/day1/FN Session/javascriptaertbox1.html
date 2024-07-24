@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>My First Web Page</title>
+        <script>
+            function greeting(){
+                
+                alert("hi,welcome!");
+            }
+            function greeting(){
+                let name = prompt("Enter your name");
+                alert("Welcome" + name);
+            }
+            function leave(){
+                
+                confirm("Do you wnat to leave the page?");
+            }
+        </script>
+    </head>
+    <body onload="welcome()" onunload="leave()">
+        <button onclick="greeting()">Say Welcome</button>
+    </body>
+</html>

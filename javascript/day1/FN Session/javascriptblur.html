@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Factorial</title>
+        <script>
+          let n = 5;
+            function factorial(n) { 
+             if (n === 0) { 
+            return 1; 
+            } 
+            else { 
+             return n * factorial( n - 1 ); 
+           } 
+           document.getElementById("ResultDiv").innerHTML = result;
+} 
+        </script>
+    </head>
+    <body>
+      Enter First Number <input type="text" id="n1" value="Enter the number" onfocus="this.value=''" onblur="factorial()";/>
+        
+      <br>
+        <button onclick="factorial">Factorial</button>
+        <br>
+        <div id="ResultDiv">
+
+        </div>
+
+    </body>
+</html>
