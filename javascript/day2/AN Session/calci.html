@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            .body{
+                border: 3px solid black;
+                width:max-content;
+                margin-left: 420px;
+                margin-top: 50px;
+                background-color:gray;
+                border-radius: 10px;
+                box-shadow:0 20px 15px gray;
+            }
+            .row{
+                height: 100px;
+                width: 400px;
+                display: flex;
+            }
+            .box{
+                border: 2px solid black;
+                height: 50px;
+                width: 80px;
+                font-size: 50px;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                background-color: pink;
+                margin: 8px;
+                border-radius: 60px;
+                
+                cursor: pointer;
+                box-shadow:0 20px 20px black;
+            }
+            .top{
+                border: 2px solid black;
+                height: 50px;
+                width: 80px;
+                font-size: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color:orange;
+                color: purple;
+                margin: 8px;
+                border-radius: 60px;
+                
+                box-shadow:0 10px 20px black;
+                cursor: pointer;
+            }
+            .top:hover{
+                background-color: lightblue;
+                color: black;
+                border: 3px solid black;
+            }
+            .box:hover{
+                border: 5px solid black;
+                height: 80px;
+                width: 100px;
+                font-size: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color:azure;
+                margin: 8px;
+                border-radius: 30px;
+                cursor: pointer;
+            }
+            .display{
+                height: 90px;
+                width: 380px;
+                border: 3px solid black;
+                border-bottom: none;
+                border-right: none;
+                margin-top: 10px;
+                margin-left: 8px;
+                border-radius: 20px;
+                background-color: peachpuff;
+            }
+            input::content{
+                font-size: 30px;
+            }
+            .full{
+                background-color:black;
+            }
+        </style>
+       
+        
+        
+    </head>
+    <body class="full">
+        <div class="body">
+            <div class="row">
+                <input type="text" class="display"></input>
+            </div>
+           <center>
+            <table>
+                <div class="row">
+                <tr>   
+                    <td> <input class = "top" type = "button" value = "c" onclick = "insert(c)" > </td>  
+                    <td> <input class = "top" type = "button" value = "%" onclick = "insert('%')" > </td>  
+                    <td> <input class = "top" type = "button" value = "<=" onclick = "insert('<=')" > </td>  
+                    <td> <input class = "top" type = "button" value = "/" onclick = "insert('/')" > </td>  
+                    </tr> 
+                
+                
+                        <tr>   
+                            <td> <input class = "box" type = "button" value = "7" onclick = "insert(7)" > </td>  
+                            <td> <input class = "box" type = "button" value = "8" onclick = "insert(8)" > </td>  
+                            <td> <input class = "box" type = "button" value = "9" onclick = "insert(9)" > </td>  
+                            <td> <input class = "top" type = "button" value = "*" onclick = "insert('*')" > </td>  
+                            </tr>  
+                        
+                            <tr>   
+                                <td> <input class = "box" type = "button" value = "4" onclick = "insert(4)" > </td>  
+                                <td> <input class = "box" type = "button" value = "5" onclick = "insert(5)" > </td>  
+                                <td> <input class = "box" type = "button" value = "6" onclick = "insert(6)" > </td>  
+                                <td> <input class = "top" type = "button" value = "-" onclick = "insert('-')" > </td>  
+                                </tr>  
+                            
+                                <tr>   
+                                     <td> <input class = "box" type = "button" value = "1" onclick = "insert(1)" > </td>  
+                                     <td> <input class = "box" type = "button" value = "2" onclick = "insert(2)" > </td>  
+                                     <td> <input class = "box" type = "button" value = "3" onclick = "insert(3)" > </td>  
+                                     <td> <input class = "top" type = "button" value = "+" onclick = "insert('+')" > </td>  
+                                        </tr>  
+                                    
+                                        <tr>   
+                                            <td> <input class = "box" type = "button" value = "00" onclick = "insert('00')" > </td>  
+                                            <td> <input class = "box" type = "button" value = "0" onclick = "insert(0)" > </td>  
+                                            <td> <input class = "box" type = "button" value = "." onclick = "insert('.')" > </td>  
+                                            <td> <input class = "top" type = "button" value = "=" onclick = "insert('=')" > </td>  
+                                            </tr>  
+                                           </div>
+                                        </div>
+                                </center>
+                                <script>
+                                    function Allclear(){
+                                      document.getElementById("n").value='';
+                                    }
+                                    function input(ip){
+                                        document.getElementById("n").value+=ip;
+                                    }
+                                    function clear(){
+                                        let n = document.getElementById("n");
+                                        n.value=n.value.slice(0,-1);
+                                    }
+                                    function equal(){
+                                        let n = document.getElementById("n");
+                                        let exp = n.value;
+                                        n.value= eval(exp);
+                                    }
+                                </script>
+    </body>
+</html>
