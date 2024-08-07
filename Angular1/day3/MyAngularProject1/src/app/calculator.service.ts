@@ -1,0 +1,23 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CalculatorService {
+  getAddition(a:number,b:number){
+    return a+b;
+  }
+  getSubtraction(a:number,b:number){
+    return a-b;
+  }
+  fact(a:number)
+  {
+    var l=1;
+    for(let i=1;i<=a;i++)
+    {
+      l=l*i;
+    }
+    return l;
+  }
+  }
+
